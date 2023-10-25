@@ -21,6 +21,7 @@ app.use((req, res, next) => {
     'https://tauri.localhost',
     'http://localhost:4200',
     'http://localhost:5000',
+    'http://localhost:5173',
     'http://mycast.xyz',
     'https://mycast.xyz',
     'https://test.mycast.xyz',
