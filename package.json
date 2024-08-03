@@ -27,7 +27,7 @@
     "@types/express-session": "^1.15.16",
     "@types/md5": "^2.1.33",
     "@types/mysql": "^2.15.8",
-    "@types/node": "^14.18.63",
+    "@types/node": "^22.1.0",
     "@types/passport": "^1.0.14",
     "@types/passport-local": "^1.0.33",
     "@types/session-file-store": "^1.2.1",
