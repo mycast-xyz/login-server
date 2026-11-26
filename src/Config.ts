@@ -3,6 +3,7 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 export class Config {
+  public static readonly DATABASE_PORT = Number(process.env.DB_PORT || 3306);
   public static readonly DATABASE_NAME: string = process.env.DB_NAME || '';
 
   public static readonly DATABASE_HOST: string =
