@@ -15,6 +15,7 @@ export class MySqlLogin implements ILogin {
   private constructor() {
     this.mConnection = createConnection({
       host: Config.DATABASE_HOST,
+      port: Config.DATABASE_PORT,
       user: Config.DATABASE_USER,
       password: Config.DATABASE_PASSWORD,
       database: Config.DATABASE_NAME,
@@ -30,6 +31,10 @@ export class MySqlLogin implements ILogin {
       this.sInstance = new MySqlLogin();
     }
     return this.sInstance;
+  }
+
+  public close(): Promise<void> {
+    return new Promise((resolve, reject) => this.mConnection.end(error => error ? reject(error) : resolve()));
   }
 
   public login(id: string, pw: string, callback: OnLoginCallback): void {
